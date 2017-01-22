@@ -1,3 +1,50 @@
+body{
+  padding-top: 75px;
+  font-weight: 200;
+}
+
+.navbar-default.navbar-fixed-top{
+  background-color: rgba(44, 62, 80, 0.9);
+  border-bottom: 3px solid #666;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: 200;
+}
+
+.navbar-default li a,
+a.navbar-brand {
+  color: #fff !important;
+}
+
+a.navbar-brand {
+  font-weight: 800;
+}
+
 input{
   margin-bottom: 5px;
+}
+
+.well{
+  height: 60vh;
+  background-color:#fefefe;
+  border-radius: 15px;
+  border: 1px solid #edf4fc;
+}
+
+.title{
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 800;
+  color: rgba(44, 62, 80, 0.9);
+}
+form{
+  margin: 50px auto;
+}
+/*ICONS*/
+
+.sunny{
+  color: #ffad33;
+}
+.cloudy{
+  color: #0099ff;
 }
