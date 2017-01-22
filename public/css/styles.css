@@ -23,7 +23,12 @@ a.navbar-brand {
 input{
   margin-bottom: 5px;
 }
-
+.col-md-4 form{
+  width: 80%;
+}
+.col-sm-6 form{
+  width: 90%;
+}
 .well{
   height: 60vh;
   background-color:#fefefe;
