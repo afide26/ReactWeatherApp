@@ -6,11 +6,11 @@ var Main = (props)=>{
   return(
     <div>
       <Nav/>
-      <div className="row">
-        <div className="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-          {props.children}
+        <div className="row">
+          <div className="medium-6 large-4 small-centered columns">
+            {props.children}
+          </div>
         </div>
-      </div>
     </div>
   );
 }
