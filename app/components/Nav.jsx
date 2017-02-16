@@ -1,29 +1,43 @@
 var React               = require('react');
 var {Link, IndexLink}   = require('react-router');
 
-var Nav = ()=>{
-  return(
-    <nav className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-          <a className="navbar-brand" href="/"><i className="fa fa-home"></i> React Weather App</a>
-        </div>
-        <div id="navbar" className="navbar-collapse collapse">
-          <ul className="nav navbar-nav">
-            <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><i className="fa fa-sun-o"></i> Get Weather</IndexLink></li>
-            <li><Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><i className="fa fa-info-circle"></i> About</Link></li>
-            <li><Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><i className="fa fa-tasks"></i> Examples</Link></li>
+
+
+var Nav = React.createClass({
+  onSearch(e){
+    e.preventDefault();
+    alert('Not yet wired up');
+  },
+  render(){
+    return(
+      <div className="top-bar">
+        <div className="top-bar-left">
+          <ul className="menu">
+            <li className="menu-text">
+              <i className="fa fa-home fa-fw"></i> React Weather App
+            </li>
+            <li>
+              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><i className="fa fa-sun-o fa-fw"></i> Get Weather</IndexLink>
+            </li>
+            <li>
+              <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><i className="fa fa-info-circle fa-fw"></i> About</Link>
+            </li>
+            <li>
+              <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><i className="fa fa-tasks fa-fw"></i> Examples</Link>
+            </li>
           </ul>
-        </div>{/*.nav-collapse*/}
+        </div>
+        <div className="top-bar-right">
+          <form onSubmit={this.onSearch}>
+            <ul className="menu">
+              <li><input type="search" placeholder="Search weather"/></li>
+              <li><input type="submit" className="button" value="Get Weather"/></li>
+            </ul>
+          </form>
+        </div>
       </div>
-    </nav>
-  );
-}
+    )
+  }
+});
 
 module.exports = Nav;
