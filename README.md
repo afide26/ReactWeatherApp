@@ -11,3 +11,4 @@
     3. Webpack
     4. API request via [Open Weather API](openweathermap.org)
     5. Foundation for Styling pages
+    6. SASS for style codes
